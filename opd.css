@@ -1,0 +1,157 @@
+@media screen {
+            body {
+                /* Back ground */
+                background: radial-gradient(93.69% 74.42% at 107.30% 67.14%, #4F46E5 0%, #4F46E5 33%, transparent 100%),
+                    radial-gradient(84.03% 119.51% at 21.94% 129.83%, #B9B6FF 0%, #B9B6FF 38%, transparent 100%),
+                    linear-gradient(3.12deg, #4F46E5 0%, #73A1F9 100%);
+                background-attachment: fixed;
+                font-family: 'Segoe UI', sans-serif;
+                padding: 40px 20px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 450px;
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(15px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 20px;
+                padding: 30px;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                color: white;
+            }
+
+            h2 {
+                color: white;
+                text-align: center;
+                margin-bottom: 25px;
+                font-size: 28px;
+                text-shadow: 2px 2px 4px rgba(184, 244, 6, 0.836);
+            }
+
+            input,
+            select {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 1px solid rgba(255, 255, 255, 0.105);
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.601);
+                color: #333;
+                font-size: 16px;
+                transition: 0.3s;
+                box-sizing: border-box;
+            }
+
+            input:focus,
+            select:focus {
+                outline: none;
+                border-color: #4F46E5;
+                box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
+                background: #fff;
+            }
+
+            .btn-group {
+                display: flex;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .print-btn {
+                flex: 2;
+                padding: 15px;
+                background: #d32f2f;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 16px;
+                transition: 0.3s;
+            }
+
+            input:hover,
+            select:hover {
+                background: rgba(255, 255, 255, 0);
+                color: #333;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.832);
+            }
+
+            .print-btn:hover {
+                background: #b71c1c;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+            }
+
+            .excel-btn {
+                flex: 1;
+                padding: 15px;
+                background: #1f7244;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .excel-btn:hover {
+                background: #155231;
+                transform: translateY(-3px);
+            }
+
+            #print-area {
+                display: none;
+            }
+        }
+
+        @media print {
+            .container {
+                display: none;
+            }
+
+            #print-area {
+                display: block;
+                position: relative;
+                width: 210mm;
+                height: 297mm;
+                background: white;
+            }
+
+            .data {
+                position: absolute;
+                font-family: 'Arial';
+                font-size: 17px;
+                color: black;
+                font-weight: bold;
+            }
+
+            /* आपके क्लिनिक की मैपिंग */
+            #out-date {
+                top: 292px;
+                left: 635px;
+            }
+
+            #out-name {
+                top: 317px;
+                left: 135px;
+            }
+
+            #out-age-sex {
+                top: 317px;
+                left: 625px;
+            }
+
+            #out-address {
+                top: 340px;
+                left: 135px;
+            }
+
+            #out-mobile {
+                top: 340px;
+                left: 625px;
+            }
+        }

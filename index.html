@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Harshdeep Clinic | Smart Record System</title>
+    <link rel="stylesheet" href="opd.css">
+    <script src="opd.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Harshdeep Clinic</h2>
+        <input type="text" id="in-name" placeholder="Patient Name">
+
+        <select id="in-gender">
+            <option value="" disabled selected>Select Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+        </select>
+
+        <input type="number" id="in-age" placeholder="Age" maxlength="2">
+
+        <input type="text" id="in-address" placeholder="Address">
+        <input type="number" id="in-mobile" placeholder="Mobile Number" maxlength="10"
+            oninput="if(this.value.length > 10) this.value = this.value.slice(0, 10);">
+
+        <input type="text" id="in-date" readonly style="background-color: #f0f0f0; cursor: not-allowed;"
+            placeholder="Date and Time">
+
+        <div class="btn-group">
+            <button class="print-btn" onclick="processEntry()">Print & Save</button>
+            <button class="excel-btn" onclick="downloadCSV()">Excel</button>
+        </div>
+        <p style="font-size: 11px; color: #eee; text-align: center; margin-top: 15px;">* रिकॉर्ड्स को Excel में डाउनलोड
+            करना न भूलें।</p>
+    </div>
+
+    <div id="print-area">
+        <div class="data" id="out-date"></div>
+        <div class="data" id="out-name"></div>
+        <div class="data" id="out-age"></div>
+        <div class="data" id="out-sex"></div>
+        <div class="data" id="out-address"></div>
+        <div class="data" id="out-mobile"></div>
+    </div>
+</body>
+
+</html>
